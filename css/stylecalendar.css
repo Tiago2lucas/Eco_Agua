@@ -1,0 +1,148 @@
+.calendario-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  overflow: hidden;
+  background-position: center;
+}
+.button-calendario {
+  background-color: #17a2b8;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.diaVermelho {
+  background-color: red;
+  color: white;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.dias {
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  gap: 5px;
+  text-align: center;
+  justify-content: center;
+}
+
+.dia.selecionado {
+  background-color: #ffeb3b; /* Destaca os dias selecionados */
+}
+.dia {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dia:hover {
+  background-color: #ddd;
+}
+
+.dia.hoje {
+  background-color: #007bff;
+}
+
+.evento {
+  font-size: 0.8rem;
+  color: white;
+  background: red;
+  border-radius: 3px;
+  padding: 2px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.modal,
+.overlay {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .dias {
+    grid-template-columns: repeat(7, 40px); /* Menor tamanho de célula */
+  }
+  .button-calendario {
+    padding: 8px 12px; /* Botões menores em telas pequenas */
+    font-size: 16px; /* Tamanho da fonte reduzido */
+  }
+
+  .header h3 {
+    font-size: 18px; /* Tamanho da fonte reduzido no título */
+  }
+
+  .dia {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  .evento {
+    font-size: 0.7rem; /* Texto do evento menor */
+  }
+}
+
+/* Em telas menores que 480px */
+@media screen and (max-width: 480px) {
+  .header {
+    flex-direction: column; /* Coloca os botões em cima e embaixo do mês */
+    text-align: center; /* Centraliza o título */
+  }
+
+  .dias {
+    grid-template-columns: repeat(7, 35px); /* Diminuir ainda mais o tamanho */
+  }
+
+  .button-calendario {
+    padding: 6px 10px; /* Botões ainda menores */
+    font-size: 14px;
+  }
+
+  .dia {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+
+  .modal {
+    width: 80%; /* Modal menor */
+  }
+
+  .evento {
+    font-size: 0.6rem; /* Texto do evento muito menor */
+  }
+}

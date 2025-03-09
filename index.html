@@ -9,6 +9,7 @@
     />
     <!-- Estilo customizado -->
     <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="css/stylecalendar.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
       rel="stylesheet"
@@ -139,6 +140,7 @@
     <section id="racionamento" class="py-5 bg-light">
       <div class="container">
         <div class="row">
+          <!-- Texto Informativo -->
           <div class="col-md-6 d-flex">
             <div class="align-self-center">
               <h2 class="text-info">Informações sobre Racionamento</h2>
@@ -150,19 +152,19 @@
                 períodos de racionamento. Fique sempre informado e evite
                 surpresas com a falta de água em sua residência ou comércio.
               </p>
-              <a href="#" class="btn btn-info">Veja mais</a>
             </div>
           </div>
+
+          <!-- Calendário -->
           <div class="col-md-6">
-            <img
-              src="img/Calendar-rafiki.png"
-              alt="calendário-figura"
-              class="img-fluid w-100 h-100 object-fit-cover"
-            />
+            <div class="calendario-container">
+              <div id="calendario"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <section id="economize" class="py-5">
       <div class="container">
         <div class="row">
@@ -180,7 +182,6 @@
                 mudanças fazem grande diferença para o planeta e para as futuras
                 gerações. Se quiser ajustes ou um tom diferente, é só avisar!
               </p>
-              <a href="#" class="btn btn-info">Veja mais</a>
             </div>
           </div>
         </div>
@@ -265,7 +266,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
 
     <!-- Arquivo JavaScript principal -->
-    <script src="js/main.js"></script>
+    <script src="js/calendar.js"></script>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
