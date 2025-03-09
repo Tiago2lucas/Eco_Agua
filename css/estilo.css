@@ -1,0 +1,32 @@
+body {
+  scroll-behavior: smooth;
+}
+
+#home {
+  background: #5bc0de;
+  color: #ffff;
+  height: 90vh;
+}
+.caixa {
+  padding: 60px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+footer p a {
+  margin: 5px 15px;
+}
+
+.bg-custom {
+  color: #ffff;
+  background-color: #1b406b;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.bg-custom:hover {
+  background-color: #55aedb;
+  color: #1b406b;
+}
+
+.text.custom {
+  color: #1b406b;
+}
